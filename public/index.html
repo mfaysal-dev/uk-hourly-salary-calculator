@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hourly to Salary Calculator UK 2026 + Minimum Wage Check</title>
+<meta name="description" content="Convert an hourly rate to an annual salary (or back) and check it against the April 2026 National Minimum Wage and National Living Wage for your age.">
+<link rel="canonical" href="https://uk-hourly-salary-calculator.vercel.app/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="Mahir Faysal">
+<meta name="theme-color" content="#4338ca">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="UK Hourly to Salary Calculator">
+<meta property="og:title" content="Hourly to Salary Calculator UK – with 2026 Minimum Wage Check">
+<meta property="og:description" content="Hourly, daily, weekly, monthly and yearly pay in one go, plus a check against the £12.71 National Living Wage and other April 2026 rates.">
+<meta property="og:url" content="https://uk-hourly-salary-calculator.vercel.app/">
+<meta property="og:image" content="https://uk-hourly-salary-calculator.vercel.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="UK hourly to salary converter with minimum wage check">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hourly to Salary Calculator UK – with 2026 Minimum Wage Check">
+<meta name="twitter:description" content="Hourly, daily, weekly, monthly and yearly pay in one go, plus a check against the £12.71 National Living Wage and other April 2026 rates.">
+<meta name="twitter:image" content="https://uk-hourly-salary-calculator.vercel.app/og.png">
+<style>:root{--accent:#4338ca;--accent-2:#6366f1;--accent-soft:#eef0ff;--hero:linear-gradient(135deg,#1e1b4b 0%,#3730a3 50%,#4f46e5 100%)}
+@media (prefers-color-scheme:dark){:root{--accent:#a5b4fc;--accent-2:#818cf8;--accent-soft:#1a1c3d}}
+.crumbs{font-size:13px;margin:0 0 14px;opacity:.85}.crumbs a{color:#fff}.crumbs span{margin:0 6px;opacity:.7}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media (max-width:420px){.row2{grid-template-columns:1fr}}
+.inline{display:flex;gap:10px;align-items:stretch}.inline .money{flex:1;min-width:0}.inline select{width:auto;flex:none;font-size:15px}input{min-width:0}.toplinks a{white-space:nowrap}.card{min-width:0}
+
+.tick{display:flex;gap:10px;align-items:center;font-weight:600;font-size:15px;cursor:pointer;margin:10px 0}.tick input{width:20px;height:20px;accent-color:var(--accent);flex:none}
+fieldset>legend{font-weight:800;font-size:16px;margin-bottom:12px;padding:0}
+.stats.three{grid-template-columns:repeat(3,minmax(0,1fr))}@media (max-width:420px){.stats.three{grid-template-columns:1fr 1fr}}
+
+.conv td.k{font-weight:650}
+.conv tr.from td{color:var(--accent);font-weight:800}
+.mw{display:flex;gap:12px;align-items:flex-start}
+.mw .ico{font-size:26px;line-height:1}
+.mw.ok{background:var(--accent-soft)}
+#firstWrap[hidden]{display:none}
+</style>
+<link rel="stylesheet" href="base.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "@id": "https://uk-hourly-salary-calculator.vercel.app/#app", "name": "UK Hourly to Salary Calculator", "url": "https://uk-hourly-salary-calculator.vercel.app/", "description": "Free UK pay converter: hourly, daily, weekly, monthly and annual pay for any hours, with a check against the National Minimum Wage and National Living Wage rates from 1 April 2026.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "inLanguage": "en-GB", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"}, "areaServed": {"@type": "Country", "name": "United Kingdom"}, "image": "https://uk-hourly-salary-calculator.vercel.app/og.png", "author": {"@type": "Person", "name": "Mahir Faysal", "url": "https://mfaysal.com"}, "isBasedOn": "https://www.gov.uk/national-minimum-wage-rates", "dateModified": "2026-10-08"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Mahir Faysal", "item": "https://mfaysal.com/"}, {"@type": "ListItem", "position": 2, "name": "UK tools", "item": "https://mfaysal.com/uk-tools"}, {"@type": "ListItem", "position": 3, "name": "Hourly to Salary Calculator", "item": "https://uk-hourly-salary-calculator.vercel.app/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the minimum wage in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "From 1 April 2026 the National Living Wage is £12.71 an hour for workers aged 21 and over. The National Minimum Wage is £10.85 for 18 to 20-year-olds and £8.00 for under-18s and apprentices."}}, {"@type": "Question", "name": "How do I convert an hourly rate to an annual salary?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply your hourly rate by your paid hours per week, then by 52. For example, £15 an hour × 37.5 hours × 52 weeks = £29,250 a year."}}, {"@type": "Question", "name": "How much is £30,000 a year per hour?", "acceptedAnswer": {"@type": "Answer", "text": "At 37.5 hours a week, £30,000 a year is about £15.38 an hour (£576.92 a week). At 40 hours a week it’s about £14.42 an hour."}}, {"@type": "Question", "name": "How much is a full-time salary on the National Living Wage?", "acceptedAnswer": {"@type": "Answer", "text": "At £12.71 an hour, 37.5 hours a week for 52 weeks comes to £24,784.50 a year. At 40 hours a week it’s £26,436.80."}}, {"@type": "Question", "name": "Who gets the apprentice rate?", "acceptedAnswer": {"@type": "Answer", "text": "Apprentices aged under 19, and apprentices aged 19 or over who are in the first year of their apprenticeship. After the first year, apprentices aged 19 or over get the minimum wage for their age."}}, {"@type": "Question", "name": "When does the minimum wage go up?", "acceptedAnswer": {"@type": "Answer", "text": "The rates change on 1 April every year. This calculator uses the rates for the date you choose, back to April 2024."}}, {"@type": "Question", "name": "What can I do if I’m paid less than the minimum wage?", "acceptedAnswer": {"@type": "Answer", "text": "Talk to your employer first and check your payslips. You can contact Acas for free advice or complain to HMRC, which can make your employer pay back what you’re owed."}}]}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#calc">Skip to calculator</a>
+<header class="hero">
+  <div class="wrap">
+    <nav class="topbar" aria-label="Site">
+      <a class="brand" href="./"><span class="logo" aria-hidden="true">⏱️</span><span>Hourly ↔ Salary</span></a>
+      <div class="toplinks"><a href="#how">How it works</a><a href="#faq">FAQs</a><a href="https://take-home-pay-calculator-uk.vercel.app/">Take-home pay</a></div>
+    </nav>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="https://mfaysal.com/">mfaysal.com</a><span aria-hidden="true">›</span><a href="https://mfaysal.com/uk-tools">UK tools</a><span aria-hidden="true">›</span><span class="here">Hourly to Salary Calculator</span></nav>
+    <h1>Hourly to Salary Calculator UK</h1>
+    <p class="lede">Turn an hourly rate into a yearly salary, or a salary into an hourly rate, for any working week, and check it against the April 2026 minimum wage for your age.</p>
+    <ul class="badges" aria-label="Highlights"><li>NLW £12.71 from April 2026</li><li>Hourly · daily · weekly · monthly · yearly</li><li>Apprentice rates</li><li>Free · No sign-up</li></ul>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+<div class="app" id="calc">
+    <section class="card" aria-labelledby="in-h">
+      <h2 id="in-h">Your pay</h2>
+      <div class="field">
+        <label for="pay">Pay before tax</label>
+        <div class="inline">
+          <div class="money"><span class="pfx" aria-hidden="true">£</span><input id="pay" type="text" inputmode="decimal" autocomplete="off" value="12.71"></div>
+          <select id="period" aria-label="Pay period"><option value="hour">an hour</option><option value="day">a day</option><option value="week">a week</option><option value="month">a month</option><option value="year">a year</option></select>
+        </div>
+        <div class="chips" aria-label="Examples">
+          <button type="button" class="chip" data-pay="12.71" data-per="hour">£12.71/hr (NLW)</button><button type="button" class="chip" data-pay="15" data-per="hour">£15/hr</button><button type="button" class="chip" data-pay="20" data-per="hour">£20/hr</button><button type="button" class="chip" data-pay="30000" data-per="year">£30k/yr</button><button type="button" class="chip" data-pay="45000" data-per="year">£45k/yr</button>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label for="hours">Paid hours a week</label>
+          <input id="hours" type="number" inputmode="decimal" min="1" max="100" step="0.5" value="37.5">
+        </div>
+        <div class="field">
+          <label for="days">Days a week</label>
+          <input id="days" type="number" inputmode="decimal" min="1" max="7" step="0.5" value="5">
+        </div>
+      </div>
+      <div class="field">
+        <label for="weeks">Paid weeks a year</label>
+        <input id="weeks" type="number" inputmode="decimal" min="1" max="52.2" step="0.1" value="52">
+        <p class="hint">Keep 52 if you get paid holiday. Use fewer weeks for term-time or zero-hours work where you’re only paid for weeks worked.</p>
+      </div>
+      <fieldset>
+        <legend>Minimum wage check</legend>
+        <div class="row2">
+          <div class="field">
+            <label for="age">Your age</label>
+            <input id="age" type="number" inputmode="numeric" min="13" max="100" value="25">
+          </div>
+          <div class="field">
+            <label for="date">Rates for</label>
+            <select id="date"><option value="2026-10-08">Now (from 1 April 2026)</option><option value="2025-10-01">April 2025 to March 2026</option><option value="2024-10-01">April 2024 to March 2025</option></select>
+          </div>
+        </div>
+        <label class="tick"><input type="checkbox" id="appr"> I’m an apprentice</label>
+        <label class="tick" id="firstWrap" hidden><input type="checkbox" id="first"> I’m in the first year of my apprenticeship</label>
+      </fieldset>
+    </section>
+
+    <section class="card sticky" aria-labelledby="out-h">
+      <h2 id="out-h" class="sr-only">Your pay converted</h2>
+      <div class="big-label" id="bigLabel">Yearly salary</div>
+      <div class="big" id="total" aria-live="polite">£0</div>
+      <p class="sub" id="summary">&nbsp;</p>
+      <div class="note mw" id="mw"></div>
+      <div class="table-scroll">
+        <table class="conv">
+          <caption class="sr-only">Your pay for each period</caption>
+          <thead><tr><th>Per</th><th class="r">Before tax</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <p class="hint" id="hoursYear"></p>
+      <div class="actions">
+        <button class="btn" id="share" type="button">🔗 Copy share link</button>
+        <button class="btn ghost" id="copy" type="button">Copy result</button>
+        <a class="btn ghost" id="takehome" href="https://take-home-pay-calculator-uk.vercel.app/">After tax →</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="grid2 section">
+    <section class="card" aria-labelledby="rates-h">
+      <h2 id="rates-h">Minimum wage rates (per hour)</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Age group</th><th class="r">From Apr 2026</th><th class="r">2025/26</th><th class="r">2024/25</th></tr></thead>
+          <tbody id="nmwRows"></tbody>
+        </table>
+      </div>
+      <p class="hint">Rates change on 1 April each year. The apprentice rate applies to apprentices under 19, or 19 and over in the first year of their apprenticeship.</p>
+    </section>
+    <section class="card" aria-labelledby="ft-h">
+      <h2 id="ft-h">Your rate against the minimums</h2>
+      <div class="bars" id="bars"></div>
+      <p class="hint" id="ftHint"></p>
+    </section>
+  </div>
+
+  <article class="card section article" id="how">
+    <h2>How to convert hourly pay to a salary</h2>
+    <p>To turn an hourly rate into a yearly salary, multiply it by the hours you’re paid each week and then by the number of paid weeks in a year (52 if your holiday is paid). To go the other way, divide your salary by your paid weeks and then by your weekly hours.</p>
+    <ul>
+      <li><strong>Hourly → yearly:</strong> hourly rate × hours a week × 52</li>
+      <li><strong>Yearly → monthly:</strong> salary ÷ 12</li>
+      <li><strong>Yearly → hourly:</strong> salary ÷ 52 ÷ hours a week</li>
+    </ul>
+    <p>For example, £15 an hour for 37.5 hours a week is £562.50 a week, £2,437.50 a month and <strong>£29,250 a year</strong>. A £30,000 salary at 37.5 hours a week works out at <strong>£15.38 an hour</strong>.</p>
+    <h3>The National Minimum Wage and National Living Wage from April 2026</h3>
+    <p>From <strong>1 April 2026</strong> the National Living Wage for workers aged 21 and over is <strong>£12.71 an hour</strong> (up from £12.21). The National Minimum Wage is <strong>£10.85</strong> for 18 to 20-year-olds, and <strong>£8.00</strong> for under-18s and apprentices. Almost all workers are entitled to it, including part-time, casual, agency and zero-hours workers. Self-employed people and company directors aren’t.</p>
+    <p>A full-time worker on the National Living Wage doing 37.5 hours a week earns <strong>£24,784.50 a year</strong> before tax. See what that leaves after tax and National Insurance with the <a href="https://take-home-pay-calculator-uk.vercel.app/?s=24784.5">take-home pay calculator</a>.</p>
+    <h3>What counts as working time</h3>
+    <p>Your average hourly pay for minimum wage purposes is worked out over each pay reference period. Some things can reduce it, such as unpaid overtime, unpaid training, travel between jobs and charges for uniform. Accommodation provided by your employer can count towards the minimum wage up to a daily limit. If any of this applies, use GOV.UK’s official checker.</p>
+    <p class="muted">Sources: <a href="https://www.gov.uk/national-minimum-wage-rates" rel="noopener">GOV.UK – National Minimum Wage and National Living Wage rates</a> (current and previous rates, apprentice rules) and <a href="https://www.gov.uk/am-i-getting-minimum-wage" rel="noopener">GOV.UK – Am I getting the minimum wage?</a>. Last checked 8 October 2026.</p>
+  </article>
+
+  <section class="section article faq" id="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">Hourly pay and minimum wage FAQs</h2>
+    <details><summary>What is the minimum wage in 2026?</summary><p>From 1 April 2026 the National Living Wage is £12.71 an hour for workers aged 21 and over. The National Minimum Wage is £10.85 for 18 to 20-year-olds and £8.00 for under-18s and apprentices.</p></details>
+    <details><summary>How do I convert an hourly rate to an annual salary?</summary><p>Multiply your hourly rate by your paid hours per week, then by 52. For example, £15 an hour × 37.5 hours × 52 weeks = £29,250 a year.</p></details>
+    <details><summary>How much is £30,000 a year per hour?</summary><p>At 37.5 hours a week, £30,000 a year is about £15.38 an hour (£576.92 a week). At 40 hours a week it’s about £14.42 an hour.</p></details>
+    <details><summary>How much is a full-time salary on the National Living Wage?</summary><p>At £12.71 an hour, 37.5 hours a week for 52 weeks comes to £24,784.50 a year. At 40 hours a week it’s £26,436.80.</p></details>
+    <details><summary>Who gets the apprentice rate?</summary><p>Apprentices aged under 19, and apprentices aged 19 or over who are in the first year of their apprenticeship. After the first year, apprentices aged 19 or over get the minimum wage for their age.</p></details>
+    <details><summary>When does the minimum wage go up?</summary><p>The rates change on 1 April every year. This calculator uses the rates for the date you choose, back to April 2024.</p></details>
+    <details><summary>What can I do if I’m paid less than the minimum wage?</summary><p>Talk to your employer first and check your payslips. You can contact Acas for free advice or complain to HMRC, which can make your employer pay back what you’re owed.</p></details>
+  </section>
+
+  <p class="disclaimer section"><strong>Disclaimer:</strong> Conversions assume the same hours every week. Minimum wage rules have exceptions (for example some accommodation deductions, unpaid trial shifts and travel time) that this tool can’t check. Use the <a href="https://www.gov.uk/am-i-getting-minimum-wage" rel="noopener">GOV.UK minimum wage calculator</a> or contact <a href="https://www.acas.org.uk/" rel="noopener">Acas</a> if you’re unsure.</p>
+
+  <section class="section" aria-labelledby="more-h">
+    <h2 id="more-h" style="font-size:20px">More free UK calculators</h2>
+    <ul class="more"><li><a href="https://take-home-pay-calculator-uk.vercel.app/">Take-Home Pay Calculator<small>Income Tax, NI &amp; student loan 2026/27</small></a></li><li><a href="https://uk-energy-cost-calculator.vercel.app/">Energy Running Cost Calculator<small>Appliance costs at the Ofgem cap</small></a></li><li><a href="https://uk-redundancy-pay-calculator.vercel.app/">Redundancy Pay Calculator<small>Statutory pay with the £751 cap</small></a></li><li><a href="https://uk-holiday-entitlement-calculator.vercel.app/">Holiday Entitlement Calculator<small>Part-time, leavers &amp; 12.07% accrual</small></a></li><li><a href="https://uk-mortgage-repayment-calculator.vercel.app/">Mortgage Calculator<small>Monthly payment, overpayments &amp; affordability</small></a></li><li><a href="https://stamp-duty-calculator-england.vercel.app/">Stamp Duty Calculator<small>First-time buyer, second home &amp; non-resident</small></a></li></ul>
+    <h2 style="font-size:17px;margin-top:22px">Free Bangladesh calculators (Bangla &amp; English)</h2>
+    <ul class="more"><li><a href="https://bangladesh-income-tax-calculator.vercel.app/">Bangladesh Income Tax Calculator<small>Tax year 2026-27 (NBR slabs)</small></a></li><li><a href="https://bangladesh-electricity-bill-calculator.vercel.app/">Bangladesh Electricity Bill Calculator<small>BERC 2026 residential tariff</small></a></li><li><a href="https://bkash-nagad-rocket-charge-calculator.vercel.app/">bKash, Nagad &amp; Rocket Charge Calculator<small>Cash out fees compared</small></a></li></ul>
+    <p style="margin-top:14px"><a href="https://mfaysal.com/uk-tools">See all free UK tools on mfaysal.com →</a></p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <span>Built by <a href="https://mfaysal.com" rel="author">Mahir Faysal</a> · <a href="https://mfaysal.com/projects/uk-hourly-salary-calculator">About this project</a> · <a href="https://mfaysal.com/uk-tools">All UK tools</a> · <a href="https://github.com/mfaysal-dev/uk-hourly-salary-calculator">Source on GitHub</a></span>
+    <span>Minimum wage rates checked against GOV.UK · 8 October 2026</span>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
